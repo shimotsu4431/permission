@@ -16,7 +16,9 @@ export default function InputBox({ isFileType = false }) {
       className={clsx([
         targetText.includes(text)
           ? 'rounded-sm border-2 border-indigo-600'
-          : 'rounded-sm border-2 border-dashed border-indigo-100',
+          : text === ''
+          ? 'rounded-sm border-2 border-dashed border-indigo-100'
+          : 'rounded-sm border-2 border-red-600',
         'w-16',
         'h-16',
         'text-center',
