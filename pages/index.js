@@ -30,12 +30,13 @@ export default function Home() {
               maxLength={1}
               className={clsx([
                 text === ''
-                  ? 'border-2 border-dashed border-indigo-100'
-                  : 'border-2 border-indigo-600',
-                'w-12',
-                'h-12',
+                  ? 'rounded-sm border-2 border-dashed border-indigo-100'
+                  : 'rounded-sm border-2 border-indigo-600',
+                'w-16',
+                'h-16',
                 'text-center',
-                'text-xl',
+                'text-3xl',
+                'font-bold',
               ])}
             ></input>
           </div>
