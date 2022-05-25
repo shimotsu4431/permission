@@ -30,7 +30,7 @@ export default function Home() {
               maxLength={1}
               className={clsx([
                 text === ''
-                  ? 'border-2 border-indigo-100 border-dashed'
+                  ? 'border-2 border-dashed border-indigo-100'
                   : 'border-2 border-indigo-600',
                 'w-12',
                 'h-12',
