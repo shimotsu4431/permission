@@ -15,8 +15,8 @@ export default function Home() {
         <header className="mb-6">
           <h1 className="mb-2 text-3xl font-bold">Permission Simulator</h1>
           <p>
-            Permission
-            SimulatorはLinuxで扱われるファイルの権限管理のシミュレーターです。
+            Permission Simulator は Linux
+            で扱われるファイルの権限管理のシミュレーターです。
           </p>
         </header>
 
