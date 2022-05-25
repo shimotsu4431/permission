@@ -42,6 +42,7 @@ export default function Home() {
         </div>
         <div className="mt-4">
           <ul>
+            <li>ファイル種別： </li>
             <li>所有者のパーミッション： </li>
             <li>グループのパーミッション： </li>
             <li>その他のユーザーのパーミッション： </li>
