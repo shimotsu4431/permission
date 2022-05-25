@@ -1,10 +1,8 @@
-import clsx from 'clsx'
 import Head from 'next/head'
-import { useState } from 'react'
+
+import InputBox from '../components/InputBox'
 
 export default function Home() {
-  const [text, setText] = useState('')
-
   return (
     <div className="min-h-screen bg-indigo-50">
       <Head>
@@ -22,23 +20,19 @@ export default function Home() {
           </p>
         </header>
 
-        <main>
-          <p className="h-12">{text}</p>
+        <main className="flex">
           <div>
-            <input
-              onChange={e => setText(e.target.value)}
-              maxLength={1}
-              className={clsx([
-                text === ''
-                  ? 'rounded-sm border-2 border-dashed border-indigo-100'
-                  : 'rounded-sm border-2 border-indigo-600',
-                'w-16',
-                'h-16',
-                'text-center',
-                'text-3xl',
-                'font-bold',
-              ])}
-            ></input>
+            <InputBox />
+          </div>
+          <div className="ml-4">
+            <InputBox />
+            <InputBox />
+            <InputBox />
+          </div>
+          <div className="ml-4">
+            <InputBox />
+            <InputBox />
+            <InputBox />
           </div>
         </main>
       </div>

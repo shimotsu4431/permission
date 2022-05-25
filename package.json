@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint --fix",
     "fix": "yarn lint",
-    "fmt": "prettier --write \"**/*.{js,ts,tsx}\""
+    "fmt": "prettier --write \"**/*.{js,ts,tsx,jsx}\""
   },
   "dependencies": {
     "clsx": "^1.1.1",
