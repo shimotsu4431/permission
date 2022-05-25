@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="p-6">
+      <div className="min-w-[880px] p-6">
         <header className="mb-6">
           <h1 className="mb-2 text-3xl font-bold">Permission Simulator</h1>
           <p>
@@ -20,26 +20,33 @@ export default function Home() {
           </p>
         </header>
 
-        <main className="flex">
+        <div className="flex">
           <div>
-            <InputBox type="file" />
+            <InputBox index={0} type="file" />
           </div>
           <div className="ml-4">
-            <InputBox type="read" />
-            <InputBox type="write" />
-            <InputBox type="execute" />
+            <InputBox index={1} type="read" />
+            <InputBox index={2} type="write" />
+            <InputBox index={3} type="execute" />
           </div>
           <div className="ml-4">
-            <InputBox type="read" />
-            <InputBox type="write" />
-            <InputBox type="execute" />
+            <InputBox index={4} type="read" />
+            <InputBox index={5} type="write" />
+            <InputBox index={6} type="execute" />
           </div>
           <div className="ml-4">
-            <InputBox type="read" />
-            <InputBox type="write" />
-            <InputBox type="execute" />
+            <InputBox index={7} type="read" />
+            <InputBox index={8} type="write" />
+            <InputBox index={9} type="execute" />
           </div>
-        </main>
+        </div>
+        <div className="mt-4">
+          <ul>
+            <li>所有者のパーミッション： </li>
+            <li>グループのパーミッション： </li>
+            <li>その他のユーザーのパーミッション： </li>
+          </ul>
+        </div>
       </div>
     </div>
   )
