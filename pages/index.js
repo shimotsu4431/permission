@@ -34,6 +34,11 @@ export default function Home() {
             <InputBox />
             <InputBox />
           </div>
+          <div className="ml-4">
+            <InputBox />
+            <InputBox />
+            <InputBox />
+          </div>
         </main>
       </div>
     </div>
