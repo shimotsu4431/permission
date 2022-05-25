@@ -22,22 +22,22 @@ export default function Home() {
 
         <main className="flex">
           <div>
-            <InputBox isFileType />
+            <InputBox type="file" />
           </div>
           <div className="ml-4">
-            <InputBox />
-            <InputBox />
-            <InputBox />
+            <InputBox type="read" />
+            <InputBox type="write" />
+            <InputBox type="execute" />
           </div>
           <div className="ml-4">
-            <InputBox />
-            <InputBox />
-            <InputBox />
+            <InputBox type="read" />
+            <InputBox type="write" />
+            <InputBox type="execute" />
           </div>
           <div className="ml-4">
-            <InputBox />
-            <InputBox />
-            <InputBox />
+            <InputBox type="read" />
+            <InputBox type="write" />
+            <InputBox type="execute" />
           </div>
         </main>
       </div>

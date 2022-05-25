@@ -3,11 +3,11 @@ import { useState } from 'react'
 
 import getTargetTextArray from '../../utils/targetText'
 
-export default function InputBox({ isFileType = false }) {
+export default function InputBox({ type }) {
   const [text, setText] = useState('')
 
-  const targetText = getTargetTextArray(isFileType)
-  console.log(isFileType, targetText)
+  const targetText = getTargetTextArray(type)
+  console.log(type, targetText)
 
   return (
     <input

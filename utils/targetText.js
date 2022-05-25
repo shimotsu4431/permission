@@ -1,8 +1,12 @@
-const getTargetTextArray = isFileType => {
-  if (isFileType) {
+const getTargetTextArray = type => {
+  if (type === 'file') {
     return ['-', 'd']
-  } else {
-    return ['r', 'w', 'x']
+  } else if (type === 'read') {
+    return ['-', 'r']
+  } else if (type === 'write') {
+    return ['-', 'w']
+  } else if (type === 'execute') {
+    return ['-', 'x']
   }
 }
 
