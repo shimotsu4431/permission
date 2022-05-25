@@ -1,8 +1,17 @@
 import Head from 'next/head'
+import { atom, useRecoilValue } from 'recoil'
 
 import InputBox from '../components/InputBox'
 
 export default function Home() {
+  const textState = atom({
+    key: "textState",
+    default: ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'],
+  });
+
+  const textList = useRecoilValue(textState);
+  console.log("textList", textList)
+
   return (
     <div className="min-h-screen bg-indigo-50">
       <Head>
@@ -42,10 +51,10 @@ export default function Home() {
         </div>
         <div className="mt-4">
           <ul>
-            <li>ファイル種別： </li>
-            <li>所有者のパーミッション： </li>
-            <li>グループのパーミッション： </li>
-            <li>その他のユーザーのパーミッション： </li>
+            <li>ファイル種別： {textList[0]}</li>
+            <li>所有者のパーミッション： {textList[1] + textList[2] + textList[3]}</li>
+            <li>グループのパーミッション： {textList[4] + textList[5] + textList[6]}</li>
+            <li>その他のユーザーのパーミッション： {textList[7] + textList[8] + textList[9]}</li>
           </ul>
         </div>
       </div>
