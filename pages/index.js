@@ -22,7 +22,7 @@ export default function Home() {
 
         <main className="flex">
           <div>
-            <InputBox />
+            <InputBox isFileType />
           </div>
           <div className="ml-4">
             <InputBox />

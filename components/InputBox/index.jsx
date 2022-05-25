@@ -1,8 +1,13 @@
 import clsx from 'clsx'
 import { useState } from 'react'
 
-export default function InputBox() {
+import getTargetTextArray from '../../utils/targetText'
+
+export default function InputBox({ isFileType = false }) {
   const [text, setText] = useState('')
+
+  const targetText = getTargetTextArray(isFileType)
+  console.log(isFileType, targetText)
 
   return (
     <input
