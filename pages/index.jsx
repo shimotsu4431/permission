@@ -64,7 +64,7 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
-              <p className="mt-2 text-center text-4xl font-bold">
+              <p className="mt-2 text-center text-4xl font-bold tracking-widest">
                 {getPermissionOctal(getPermissionTexts(1))}
               </p>
             </div>
@@ -113,7 +113,7 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
-              <p className="mt-2 text-center text-4xl font-bold">
+              <p className="mt-2 text-center text-4xl font-bold tracking-widest">
                 {getPermissionOctal(getPermissionTexts(4))}
               </p>
             </div>
@@ -164,7 +164,7 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
-              <p className="mt-2 text-center text-4xl font-bold">
+              <p className="mt-2 text-center text-4xl font-bold tracking-widest">
                 {getPermissionOctal(getPermissionTexts(7))}
               </p>
             </div>
