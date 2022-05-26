@@ -33,7 +33,7 @@ export default function InputBox({ type, index }) {
     <input
       onChange={e => handleChange(e)}
       maxLength={1}
-      placeholder={'-'}
+      placeholder={textList[index].value}
       className={clsx([
         targetText.includes(text)
           ? 'rounded-sm border-2 border-indigo-600'
