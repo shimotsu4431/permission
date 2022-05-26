@@ -42,7 +42,10 @@ export default function Home() {
             Permission Simulator は Linux
             で扱われるファイルの権限管理のシミュレーターです。
           </p>
-          <p>すべての入力エリアが青枠で囲われたら、書式は有効です。【例】drwxrwxrwx / -rwxr-x-w-</p>
+          <p>
+            すべての入力エリアが青枠で囲われたら、書式は有効です。【例】drwxrwxrwx
+            / -rwxr-x-w-
+          </p>
         </header>
 
         <div className="flex">
@@ -56,7 +59,9 @@ export default function Home() {
             <InputBox index={1} type="read" />
             <InputBox index={2} type="write" />
             <InputBox index={3} type="execute" />
-            <p className="mt-2 text-center text-sm font-bold">所有者のアクセス権</p>
+            <p className="mt-2 text-center text-sm font-bold">
+              所有者のアクセス権
+            </p>
             <div className="mt-4 border-t-2">
               <p className="mt-4 text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
@@ -83,7 +88,9 @@ export default function Home() {
             <InputBox index={4} type="read" />
             <InputBox index={5} type="write" />
             <InputBox index={6} type="execute" />
-            <p className="mt-2 text-center text-sm font-bold">グループのアクセス権</p>
+            <p className="mt-2 text-center text-sm font-bold">
+              グループのアクセス権
+            </p>
             <div className="mt-4 border-t-2">
               <p className="mt-4 text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
@@ -132,6 +139,21 @@ export default function Home() {
                 <PermissionLabel index={9} label={'実行'} />
               </ul>
             </div>
+          </div>
+        </div>
+
+        {/* ターミナル */}
+        <div className="mt-8">
+          <div className="flex h-14 w-[500px] items-center bg-slate-800 pl-4">
+            <p className="text-white">
+              $ chmod{' '}
+              {`${getPermissionBinary(
+                getPermissionTexts(1)
+              )}${getPermissionBinary(
+                getPermissionTexts(4)
+              )}${getPermissionBinary(getPermissionTexts(7))}`}{' '}
+              [filename]
+            </p>
           </div>
         </div>
       </div>
