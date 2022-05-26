@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { atom, useRecoilValue } from 'recoil'
 
 import InputBox from '../components/InputBox'
-import { getPermissionBinary } from '../utils/permission'
+import { getPermissionBinary, getPermissionOctal } from '../utils/permission'
 
 export const textState = atom({
   key: 'textState',
@@ -92,7 +92,13 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
-              <p className="mt-2 text-center text-4xl font-bold">111</p>
+              <p className="mt-2 text-center text-4xl font-bold">
+                {getPermissionOctal([
+                  textList[1].value,
+                  textList[2].value,
+                  textList[3].value,
+                ])}
+              </p>
             </div>
           </div>
           <div className="ml-4 min-w-[216px]">
@@ -112,7 +118,13 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
-              <p className="mt-2 text-center text-4xl font-bold">111</p>
+              <p className="mt-2 text-center text-4xl font-bold">
+                {getPermissionOctal([
+                  textList[4].value,
+                  textList[5].value,
+                  textList[6].value,
+                ])}
+              </p>
             </div>
           </div>
           <div className="ml-4 min-w-[216px]">
@@ -134,7 +146,13 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
-              <p className="mt-2 text-center text-4xl font-bold">111</p>
+              <p className="mt-2 text-center text-4xl font-bold">
+                {getPermissionOctal([
+                  textList[7].value,
+                  textList[8].value,
+                  textList[9].value,
+                ])}
+              </p>
             </div>
           </div>
         </div>
