@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import Head from 'next/head'
 import { atom, useRecoilValue } from 'recoil'
 
@@ -7,9 +8,9 @@ import { getPermissionBinary, getPermissionOctal } from '../utils/permission'
 const initArray = [...Array(10)].map((_, i) => {
   return {
     index: i,
-    value: '-'
+    value: '-',
   }
-});
+})
 
 export const textState = atom({
   key: 'textState',
@@ -65,6 +66,34 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(1))}
               </p>
             </div>
+            <div className="mt-4">
+              <ul className="flex">
+                <li
+                  className={clsx([
+                    textList[1].value === 'r' && 'border-indigo-600',
+                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
+                  ])}
+                >
+                  読み
+                </li>
+                <li
+                  className={clsx([
+                    textList[2].value === 'w' && 'border-indigo-600',
+                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
+                  ])}
+                >
+                  書き
+                </li>
+                <li
+                  className={clsx([
+                    textList[3].value === 'x' && 'border-indigo-600',
+                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
+                  ])}
+                >
+                  実行
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="ml-4 min-w-[216px]">
             <InputBox index={4} type="read" />
@@ -82,6 +111,34 @@ export default function Home() {
               <p className="mt-2 text-center text-4xl font-bold">
                 {getPermissionOctal(getPermissionTexts(4))}
               </p>
+            </div>
+            <div className="mt-4">
+              <ul className="flex">
+                <li
+                  className={clsx([
+                    textList[4].value === 'r' && 'border-indigo-600',
+                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
+                  ])}
+                >
+                  読み
+                </li>
+                <li
+                  className={clsx([
+                    textList[5].value === 'w' && 'border-indigo-600',
+                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
+                  ])}
+                >
+                  書き
+                </li>
+                <li
+                  className={clsx([
+                    textList[6].value === 'x' && 'border-indigo-600',
+                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
+                  ])}
+                >
+                  実行
+                </li>
+              </ul>
             </div>
           </div>
           <div className="ml-4 min-w-[216px]">
@@ -102,6 +159,34 @@ export default function Home() {
               <p className="mt-2 text-center text-4xl font-bold">
                 {getPermissionOctal(getPermissionTexts(7))}
               </p>
+            </div>
+            <div className="mt-4">
+              <ul className="flex">
+                <li
+                  className={clsx([
+                    textList[7].value === 'r' && 'border-indigo-600',
+                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
+                  ])}
+                >
+                  読み
+                </li>
+                <li
+                  className={clsx([
+                    textList[8].value === 'w' && 'border-indigo-600',
+                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
+                  ])}
+                >
+                  書き
+                </li>
+                <li
+                  className={clsx([
+                    textList[9].value === 'x' && 'border-indigo-600',
+                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
+                  ])}
+                >
+                  実行
+                </li>
+              </ul>
             </div>
           </div>
         </div>
