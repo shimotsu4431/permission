@@ -79,9 +79,13 @@ export default function Home() {
             <InputBox index={2} type="write" />
             <InputBox index={3} type="execute" />
             <p className="mt-2 text-center text-sm">所有者のアクセス権</p>
-            <div className="mt-4">
+            <div className="mt-8">
               <p className="text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">7</p>
+            </div>
+            <div className="mt-4">
+              <p className="text-center text-sm font-bold">2進数</p>
+              <p className="mt-2 text-center text-4xl font-bold">111</p>
             </div>
           </div>
           <div className="ml-4 min-w-[216px]">
@@ -89,9 +93,13 @@ export default function Home() {
             <InputBox index={5} type="write" />
             <InputBox index={6} type="execute" />
             <p className="mt-2 text-center text-sm">グループのアクセス権</p>
-            <div className="mt-4">
+            <div className="mt-8">
               <p className="text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">5</p>
+            </div>
+            <div className="mt-4">
+              <p className="text-center text-sm font-bold">2進数</p>
+              <p className="mt-2 text-center text-4xl font-bold">111</p>
             </div>
           </div>
           <div className="ml-4 min-w-[216px]">
@@ -101,9 +109,13 @@ export default function Home() {
             <p className="mt-2 text-center text-sm">
               その他のユーザーのアクセス権
             </p>
-            <div className="mt-4">
+            <div className="mt-8">
               <p className="text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">5</p>
+            </div>
+            <div className="mt-4">
+              <p className="text-center text-sm font-bold">2進数</p>
+              <p className="mt-2 text-center text-4xl font-bold">111</p>
             </div>
           </div>
         </div>
