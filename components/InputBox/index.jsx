@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useRecoilState } from 'recoil'
 
 import { textState } from '../../pages/index.jsx'
@@ -9,7 +9,9 @@ export default function InputBox({ type, index }) {
   const [textList, setTextList] = useRecoilState(textState)
   const [text, setText] = useState('')
 
-  const targetText = getTargetTextArray(type)
+  const targetText = useMemo(() => {
+    return getTargetTextArray(type)
+  },[type])
 
   return (
     <input
