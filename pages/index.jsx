@@ -70,23 +70,27 @@ export default function Home() {
         </header>
 
         <div className="flex">
-          <div>
+          <div className='min-w-[216px] text-center'>
             <InputBox index={0} type="file" />
+            <p className='text-sm mt-2'>ファイル種別</p>
           </div>
-          <div className="ml-4">
+          <div className="min-w-[216px] ml-4">
             <InputBox index={1} type="read" />
             <InputBox index={2} type="write" />
             <InputBox index={3} type="execute" />
+            <p className='text-sm text-center mt-2'>所有者のアクセス権</p>
           </div>
-          <div className="ml-4">
+          <div className="min-w-[216px] ml-4">
             <InputBox index={4} type="read" />
             <InputBox index={5} type="write" />
             <InputBox index={6} type="execute" />
+            <p className='text-sm text-center mt-2'>グループのアクセス権</p>
           </div>
-          <div className="ml-4">
+          <div className="min-w-[216px] ml-4">
             <InputBox index={7} type="read" />
             <InputBox index={8} type="write" />
             <InputBox index={9} type="execute" />
+            <p className='text-sm text-center mt-2'>その他のユーザーのアクセス権</p>
           </div>
         </div>
         <div className="mt-4">
