@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { atom, useRecoilValue } from 'recoil'
 
 import InputBox from '../components/InputBox'
+import { getPermissionBinary } from '../utils/permission'
 
 export const textState = atom({
   key: 'textState',
@@ -81,7 +82,13 @@ export default function Home() {
             <p className="mt-2 text-center text-sm">所有者のアクセス権</p>
             <div className="mt-8">
               <p className="text-center text-sm font-bold">8進数</p>
-              <p className="mt-2 text-center text-4xl font-bold">7</p>
+              <p className="mt-2 text-center text-4xl font-bold">
+                {getPermissionBinary([
+                  textList[1].value,
+                  textList[2].value,
+                  textList[3].value,
+                ])}
+              </p>
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
@@ -95,7 +102,13 @@ export default function Home() {
             <p className="mt-2 text-center text-sm">グループのアクセス権</p>
             <div className="mt-8">
               <p className="text-center text-sm font-bold">8進数</p>
-              <p className="mt-2 text-center text-4xl font-bold">5</p>
+              <p className="mt-2 text-center text-4xl font-bold">
+                {getPermissionBinary([
+                  textList[4].value,
+                  textList[5].value,
+                  textList[6].value,
+                ])}
+              </p>
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
@@ -111,30 +124,19 @@ export default function Home() {
             </p>
             <div className="mt-8">
               <p className="text-center text-sm font-bold">8進数</p>
-              <p className="mt-2 text-center text-4xl font-bold">5</p>
+              <p className="mt-2 text-center text-4xl font-bold">
+                {getPermissionBinary([
+                  textList[7].value,
+                  textList[8].value,
+                  textList[9].value,
+                ])}
+              </p>
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
               <p className="mt-2 text-center text-4xl font-bold">111</p>
             </div>
           </div>
-        </div>
-        <div className="mt-4">
-          <ul>
-            <li>ファイル種別： {textList[0].value}</li>
-            <li>
-              所有者のパーミッション：{' '}
-              {textList[1].value + textList[2].value + textList[3].value}
-            </li>
-            <li>
-              グループのパーミッション：{' '}
-              {textList[4].value + textList[5].value + textList[6].value}
-            </li>
-            <li>
-              その他のユーザーのパーミッション：{' '}
-              {textList[7].value + textList[8].value + textList[9].value}
-            </li>
-          </ul>
         </div>
       </div>
     </div>
