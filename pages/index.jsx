@@ -3,14 +3,54 @@ import { atom, useRecoilValue } from 'recoil'
 
 import InputBox from '../components/InputBox'
 
-export default function Home() {
-  const textState = atom({
-    key: "textState",
-    default: ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'],
-  });
+export const textState = atom({
+  key: 'textState',
+  default: [
+    {
+      index: 0,
+      value: '-',
+    },
+    {
+      index: 1,
+      value: '-',
+    },
+    {
+      index: 2,
+      value: '-',
+    },
+    {
+      index: 3,
+      value: '-',
+    },
+    {
+      index: 4,
+      value: '-',
+    },
+    {
+      index: 5,
+      value: '-',
+    },
+    {
+      index: 6,
+      value: '-',
+    },
+    {
+      index: 7,
+      value: '-',
+    },
+    {
+      index: 8,
+      value: '-',
+    },
+    {
+      index: 9,
+      value: '-',
+    },
+  ],
+})
 
-  const textList = useRecoilValue(textState);
-  console.log("textList", textList)
+export default function Home() {
+  const textList = useRecoilValue(textState)
 
   return (
     <div className="min-h-screen bg-indigo-50">
@@ -51,10 +91,19 @@ export default function Home() {
         </div>
         <div className="mt-4">
           <ul>
-            <li>ファイル種別： {textList[0]}</li>
-            <li>所有者のパーミッション： {textList[1] + textList[2] + textList[3]}</li>
-            <li>グループのパーミッション： {textList[4] + textList[5] + textList[6]}</li>
-            <li>その他のユーザーのパーミッション： {textList[7] + textList[8] + textList[9]}</li>
+            <li>ファイル種別： {textList[0].value}</li>
+            <li>
+              所有者のパーミッション：{' '}
+              {textList[1].value + textList[2].value + textList[3].value}
+            </li>
+            <li>
+              グループのパーミッション：{' '}
+              {textList[4].value + textList[5].value + textList[6].value}
+            </li>
+            <li>
+              その他のユーザーのパーミッション：{' '}
+              {textList[7].value + textList[8].value + textList[9].value}
+            </li>
           </ul>
         </div>
       </div>

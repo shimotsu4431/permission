@@ -1,17 +1,33 @@
 import clsx from 'clsx'
 import { useState } from 'react'
+import { useRecoilState } from 'recoil'
 
+import { textState } from '../../pages/index.jsx'
 import getTargetTextArray from '../../utils/targetText'
 
-export default function InputBox({ type }) {
+export default function InputBox({ type, index }) {
+  const [textList, setTextList] = useRecoilState(textState)
   const [text, setText] = useState('')
 
   const targetText = getTargetTextArray(type)
-  console.log(type, targetText)
 
   return (
     <input
-      onChange={e => setText(e.target.value)}
+      onChange={e => {
+        setText(e.target.value)
+
+        const newValue = {
+          index: index,
+          value: e.target.value,
+        }
+        const newList = [
+          ...textList.slice(0, index),
+          newValue,
+          ...textList.slice(index + 1),
+        ]
+
+        setTextList(newList)
+      }}
       maxLength={1}
       className={clsx([
         targetText.includes(text)
