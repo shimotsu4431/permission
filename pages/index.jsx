@@ -49,6 +49,8 @@ export default function Home() {
             <InputBox index={0} type="file" />
             <p className="mt-2 text-sm">ファイル種別</p>
           </div>
+
+          {/* 所有者 */}
           <div className="ml-4 min-w-[216px]">
             <InputBox index={1} type="read" />
             <InputBox index={2} type="write" />
@@ -66,11 +68,12 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(1))}
               </p>
             </div>
+            {/* TODO: コンポーネント化したい */}
             <div className="mt-4">
               <ul className="flex">
                 <li
                   className={clsx([
-                    textList[1].value === 'r' && 'border-indigo-600',
+                    textList[1].value === 'r' && 'border-indigo-600 font-bold',
                     'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
                   ])}
                 >
@@ -78,7 +81,7 @@ export default function Home() {
                 </li>
                 <li
                   className={clsx([
-                    textList[2].value === 'w' && 'border-indigo-600',
+                    textList[2].value === 'w' && 'border-indigo-600 font-bold',
                     'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
                   ])}
                 >
@@ -86,7 +89,7 @@ export default function Home() {
                 </li>
                 <li
                   className={clsx([
-                    textList[3].value === 'x' && 'border-indigo-600',
+                    textList[3].value === 'x' && 'border-indigo-600 font-bold',
                     'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
                   ])}
                 >
@@ -95,6 +98,8 @@ export default function Home() {
               </ul>
             </div>
           </div>
+
+          {/* グループ */}
           <div className="ml-4 min-w-[216px]">
             <InputBox index={4} type="read" />
             <InputBox index={5} type="write" />
@@ -112,11 +117,12 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(4))}
               </p>
             </div>
+            {/* TODO: コンポーネント化したい */}
             <div className="mt-4">
               <ul className="flex">
                 <li
                   className={clsx([
-                    textList[4].value === 'r' && 'border-indigo-600',
+                    textList[4].value === 'r' && 'border-indigo-600 font-bold',
                     'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
                   ])}
                 >
@@ -124,7 +130,7 @@ export default function Home() {
                 </li>
                 <li
                   className={clsx([
-                    textList[5].value === 'w' && 'border-indigo-600',
+                    textList[5].value === 'w' && 'border-indigo-600 font-bold',
                     'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
                   ])}
                 >
@@ -132,7 +138,7 @@ export default function Home() {
                 </li>
                 <li
                   className={clsx([
-                    textList[6].value === 'x' && 'border-indigo-600',
+                    textList[6].value === 'x' && 'border-indigo-600 font-bold',
                     'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
                   ])}
                 >
@@ -141,6 +147,8 @@ export default function Home() {
               </ul>
             </div>
           </div>
+
+          {/* その他のユーザー */}
           <div className="ml-4 min-w-[216px]">
             <InputBox index={7} type="read" />
             <InputBox index={8} type="write" />
@@ -160,11 +168,12 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(7))}
               </p>
             </div>
+            {/* TODO: コンポーネント化したい */}
             <div className="mt-4">
               <ul className="flex">
                 <li
                   className={clsx([
-                    textList[7].value === 'r' && 'border-indigo-600',
+                    textList[7].value === 'r' && 'border-indigo-600 font-bold',
                     'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
                   ])}
                 >
@@ -172,7 +181,7 @@ export default function Home() {
                 </li>
                 <li
                   className={clsx([
-                    textList[8].value === 'w' && 'border-indigo-600',
+                    textList[8].value === 'w' && 'border-indigo-600 font-bold',
                     'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
                   ])}
                 >
@@ -180,7 +189,7 @@ export default function Home() {
                 </li>
                 <li
                   className={clsx([
-                    textList[9].value === 'x' && 'border-indigo-600',
+                    textList[9].value === 'x' && 'border-indigo-600 font-bold',
                     'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
                   ])}
                 >
