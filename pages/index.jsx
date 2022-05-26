@@ -47,7 +47,7 @@ export default function Home() {
         <div className="flex">
           <div className="min-w-[216px] text-center">
             <InputBox index={0} type="file" />
-            <p className="mt-2 text-sm">ファイル種別</p>
+            <p className="mt-2 text-sm font-bold">ファイル種別</p>
           </div>
 
           {/* 所有者 */}
@@ -55,9 +55,9 @@ export default function Home() {
             <InputBox index={1} type="read" />
             <InputBox index={2} type="write" />
             <InputBox index={3} type="execute" />
-            <p className="mt-2 text-center text-sm">所有者のアクセス権</p>
-            <div className="mt-8">
-              <p className="text-center text-sm font-bold">8進数</p>
+            <p className="mt-2 text-center text-sm font-bold">所有者のアクセス権</p>
+            <div className="mt-4 border-t-2">
+              <p className="mt-4 text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
                 {getPermissionBinary(getPermissionTexts(1))}
               </p>
@@ -82,9 +82,9 @@ export default function Home() {
             <InputBox index={4} type="read" />
             <InputBox index={5} type="write" />
             <InputBox index={6} type="execute" />
-            <p className="mt-2 text-center text-sm">グループのアクセス権</p>
-            <div className="mt-8">
-              <p className="text-center text-sm font-bold">8進数</p>
+            <p className="mt-2 text-center text-sm font-bold">グループのアクセス権</p>
+            <div className="mt-4 border-t-2">
+              <p className="mt-4 text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
                 {getPermissionBinary(getPermissionTexts(4))}
               </p>
@@ -109,11 +109,11 @@ export default function Home() {
             <InputBox index={7} type="read" />
             <InputBox index={8} type="write" />
             <InputBox index={9} type="execute" />
-            <p className="mt-2 text-center text-sm">
+            <p className="mt-2 text-center text-sm font-bold">
               その他のユーザーのアクセス権
             </p>
-            <div className="mt-8">
-              <p className="text-center text-sm font-bold">8進数</p>
+            <div className="mt-4 border-t-2">
+              <p className="mt-4 text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
                 {getPermissionBinary(getPermissionTexts(7))}
               </p>
