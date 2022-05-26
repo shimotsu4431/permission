@@ -42,6 +42,7 @@ export default function Home() {
             Permission Simulator は Linux
             で扱われるファイルの権限管理のシミュレーターです。
           </p>
+          <p>すべての入力エリアが青枠で囲われたら、書式は有効です。【例】drwxrwxrwx / -rwxr-x-w-</p>
         </header>
 
         <div className="flex">
