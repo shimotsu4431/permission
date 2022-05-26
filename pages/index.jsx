@@ -1,8 +1,8 @@
-import clsx from 'clsx'
 import Head from 'next/head'
 import { atom, useRecoilValue } from 'recoil'
 
 import InputBox from '../components/InputBox'
+import PermissionLabel from '../components/PermissionLabel'
 import { getPermissionBinary, getPermissionOctal } from '../utils/permission'
 
 const initArray = [...Array(10)].map((_, i) => {
@@ -68,33 +68,11 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(1))}
               </p>
             </div>
-            {/* TODO: コンポーネント化したい */}
             <div className="mt-4">
               <ul className="flex">
-                <li
-                  className={clsx([
-                    textList[1].value === 'r' && 'border-indigo-600 font-bold',
-                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
-                  ])}
-                >
-                  読み
-                </li>
-                <li
-                  className={clsx([
-                    textList[2].value === 'w' && 'border-indigo-600 font-bold',
-                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
-                  ])}
-                >
-                  書き
-                </li>
-                <li
-                  className={clsx([
-                    textList[3].value === 'x' && 'border-indigo-600 font-bold',
-                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
-                  ])}
-                >
-                  実行
-                </li>
+                <PermissionLabel index={1} label={'読み'} />
+                <PermissionLabel index={2} label={'書き'} />
+                <PermissionLabel index={3} label={'実行'} />
               </ul>
             </div>
           </div>
@@ -117,33 +95,11 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(4))}
               </p>
             </div>
-            {/* TODO: コンポーネント化したい */}
             <div className="mt-4">
               <ul className="flex">
-                <li
-                  className={clsx([
-                    textList[4].value === 'r' && 'border-indigo-600 font-bold',
-                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
-                  ])}
-                >
-                  読み
-                </li>
-                <li
-                  className={clsx([
-                    textList[5].value === 'w' && 'border-indigo-600 font-bold',
-                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
-                  ])}
-                >
-                  書き
-                </li>
-                <li
-                  className={clsx([
-                    textList[6].value === 'x' && 'border-indigo-600 font-bold',
-                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
-                  ])}
-                >
-                  実行
-                </li>
+                <PermissionLabel index={4} label={'読み'} />
+                <PermissionLabel index={5} label={'書き'} />
+                <PermissionLabel index={6} label={'実行'} />
               </ul>
             </div>
           </div>
@@ -168,33 +124,11 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(7))}
               </p>
             </div>
-            {/* TODO: コンポーネント化したい */}
             <div className="mt-4">
               <ul className="flex">
-                <li
-                  className={clsx([
-                    textList[7].value === 'r' && 'border-indigo-600 font-bold',
-                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
-                  ])}
-                >
-                  読み
-                </li>
-                <li
-                  className={clsx([
-                    textList[8].value === 'w' && 'border-indigo-600 font-bold',
-                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
-                  ])}
-                >
-                  書き
-                </li>
-                <li
-                  className={clsx([
-                    textList[9].value === 'x' && 'border-indigo-600 font-bold',
-                    'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 border-indigo-100 text-sm',
-                  ])}
-                >
-                  実行
-                </li>
+                <PermissionLabel index={7} label={'読み'} />
+                <PermissionLabel index={8} label={'書き'} />
+                <PermissionLabel index={9} label={'実行'} />
               </ul>
             </div>
           </div>
