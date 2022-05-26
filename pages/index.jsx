@@ -19,6 +19,13 @@ export const textState = atom({
 export default function Home() {
   const textList = useRecoilValue(textState)
 
+  const getPermissionTexts = startIndex => {
+    const array = textList.slice(startIndex, startIndex + 3)
+    const result = [array[0].value, array[1].value, array[2].value]
+
+    return result
+  }
+
   return (
     <div className="min-h-screen bg-indigo-50">
       <Head>
@@ -49,21 +56,13 @@ export default function Home() {
             <div className="mt-8">
               <p className="text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
-                {getPermissionBinary([
-                  textList[1].value,
-                  textList[2].value,
-                  textList[3].value,
-                ])}
+                {getPermissionBinary(getPermissionTexts(1))}
               </p>
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
-                {getPermissionOctal([
-                  textList[1].value,
-                  textList[2].value,
-                  textList[3].value,
-                ])}
+                {getPermissionOctal(getPermissionTexts(1))}
               </p>
             </div>
           </div>
@@ -75,21 +74,13 @@ export default function Home() {
             <div className="mt-8">
               <p className="text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
-                {getPermissionBinary([
-                  textList[4].value,
-                  textList[5].value,
-                  textList[6].value,
-                ])}
+                {getPermissionBinary(getPermissionTexts(4))}
               </p>
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
-                {getPermissionOctal([
-                  textList[4].value,
-                  textList[5].value,
-                  textList[6].value,
-                ])}
+                {getPermissionOctal(getPermissionTexts(4))}
               </p>
             </div>
           </div>
@@ -103,21 +94,13 @@ export default function Home() {
             <div className="mt-8">
               <p className="text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
-                {getPermissionBinary([
-                  textList[7].value,
-                  textList[8].value,
-                  textList[9].value,
-                ])}
+                {getPermissionBinary(getPermissionTexts(7))}
               </p>
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
-                {getPermissionOctal([
-                  textList[7].value,
-                  textList[8].value,
-                  textList[9].value,
-                ])}
+                {getPermissionOctal(getPermissionTexts(7))}
               </p>
             </div>
           </div>
