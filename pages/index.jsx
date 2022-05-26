@@ -143,7 +143,7 @@ export default function Home() {
         </div>
 
         {/* ターミナル */}
-        <div className="mt-8">
+        <div className="mt-12">
           <div className="flex h-14 w-[500px] items-center bg-slate-800 pl-4">
             <p className="text-white">
               $ chmod{' '}
