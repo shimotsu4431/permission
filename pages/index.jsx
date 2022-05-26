@@ -70,27 +70,41 @@ export default function Home() {
         </header>
 
         <div className="flex">
-          <div className='min-w-[216px] text-center'>
+          <div className="min-w-[216px] text-center">
             <InputBox index={0} type="file" />
-            <p className='text-sm mt-2'>ファイル種別</p>
+            <p className="mt-2 text-sm">ファイル種別</p>
           </div>
-          <div className="min-w-[216px] ml-4">
+          <div className="ml-4 min-w-[216px]">
             <InputBox index={1} type="read" />
             <InputBox index={2} type="write" />
             <InputBox index={3} type="execute" />
-            <p className='text-sm text-center mt-2'>所有者のアクセス権</p>
+            <p className="mt-2 text-center text-sm">所有者のアクセス権</p>
+            <div className="mt-4">
+              <p className="text-center text-sm font-bold">8進数</p>
+              <p className="mt-2 text-center text-4xl font-bold">7</p>
+            </div>
           </div>
-          <div className="min-w-[216px] ml-4">
+          <div className="ml-4 min-w-[216px]">
             <InputBox index={4} type="read" />
             <InputBox index={5} type="write" />
             <InputBox index={6} type="execute" />
-            <p className='text-sm text-center mt-2'>グループのアクセス権</p>
+            <p className="mt-2 text-center text-sm">グループのアクセス権</p>
+            <div className="mt-4">
+              <p className="text-center text-sm font-bold">8進数</p>
+              <p className="mt-2 text-center text-4xl font-bold">5</p>
+            </div>
           </div>
-          <div className="min-w-[216px] ml-4">
+          <div className="ml-4 min-w-[216px]">
             <InputBox index={7} type="read" />
             <InputBox index={8} type="write" />
             <InputBox index={9} type="execute" />
-            <p className='text-sm text-center mt-2'>その他のユーザーのアクセス権</p>
+            <p className="mt-2 text-center text-sm">
+              その他のユーザーのアクセス権
+            </p>
+            <div className="mt-4">
+              <p className="text-center text-sm font-bold">8進数</p>
+              <p className="mt-2 text-center text-4xl font-bold">5</p>
+            </div>
           </div>
         </div>
         <div className="mt-4">
