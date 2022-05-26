@@ -11,25 +11,27 @@ export default function InputBox({ type, index }) {
 
   const targetText = useMemo(() => {
     return getTargetTextArray(type)
-  },[type])
+  }, [type])
+
+  const handleChange = e => {
+    setText(e.target.value)
+
+    const newValue = {
+      index: index,
+      value: e.target.value,
+    }
+    const newList = [
+      ...textList.slice(0, index),
+      newValue,
+      ...textList.slice(index + 1),
+    ]
+
+    setTextList(newList)
+  }
 
   return (
     <input
-      onChange={e => {
-        setText(e.target.value)
-
-        const newValue = {
-          index: index,
-          value: e.target.value,
-        }
-        const newList = [
-          ...textList.slice(0, index),
-          newValue,
-          ...textList.slice(index + 1),
-        ]
-
-        setTextList(newList)
-      }}
+      onChange={e => handleChange(e)}
       maxLength={1}
       className={clsx([
         targetText.includes(text)
