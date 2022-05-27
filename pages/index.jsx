@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { atom, useRecoilValue } from 'recoil'
+import { atom, useRecoilState } from 'recoil'
 
 import InputBox from '../components/InputBox'
 import InputBoxList from '../components/InputBoxList'
@@ -19,7 +19,7 @@ export const textState = atom({
 })
 
 export default function Home() {
-  const textList = useRecoilValue(textState)
+  const [textList, setTextList] = useRecoilState(textState)
 
   const getPermissionTexts = startIndex => {
     const array = textList.slice(startIndex, startIndex + 3)
@@ -37,16 +37,30 @@ export default function Home() {
       </Head>
 
       <div className="min-w-[880px] p-6">
-        <header className="mb-6">
+        <header className="mb-10">
           <h1 className="mb-2 text-3xl font-bold">Permission Simulator</h1>
           <p>
             Permission Simulator は Linux
             で扱われるファイルの権限管理のシミュレーターです。
           </p>
-          <p>
-            すべての入力エリアが青枠で囲われたら、書式は有効です。【例】drwxrwxrwx
-            / -rwxr-x-w-
-          </p>
+          <p>すべての入力エリアが青枠で囲われたら、書式は有効です。</p>
+          <h2 className="mt-4 mb-2 text-xl font-bold">例</h2>
+          <ul>
+            <li className="mb-2 text-base">
+              <span>drwxrwxrwx</span>
+              <button
+                className="ml-2 rounded-md border-2 border-indigo-600 p-1 text-xs bg-white hover:bg-indigo-600 hover:text-white"
+              >
+                適用する
+              </button>
+            </li>
+            <li className="text-base">
+              <span>-rwxr-x-w-</span>
+              <button className="ml-2 rounded-md border-2 border-indigo-600 p-1 text-xs bg-white hover:bg-indigo-600 hover:text-white">
+                適用する
+              </button>
+            </li>
+          </ul>
         </header>
 
         <div className="flex">
