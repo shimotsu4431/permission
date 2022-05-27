@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { atom, useRecoilValue } from 'recoil'
 
 import InputBox from '../components/InputBox'
+import InputBoxList from '../components/InputBoxList'
 import PermissionLabelList from '../components/PermissionLabelList'
 import { getPermissionBinary, getPermissionOctal } from '../utils/permission'
 
@@ -56,9 +57,7 @@ export default function Home() {
 
           {/* 所有者 */}
           <div className="ml-4 min-w-[216px]">
-            <InputBox index={1} type="read" />
-            <InputBox index={2} type="write" />
-            <InputBox index={3} type="execute" />
+            <InputBoxList startIndex={1} />
             <p className="mt-2 text-center text-sm font-bold">
               所有者のアクセス権
             </p>
@@ -79,9 +78,7 @@ export default function Home() {
 
           {/* グループ */}
           <div className="ml-4 min-w-[216px]">
-            <InputBox index={4} type="read" />
-            <InputBox index={5} type="write" />
-            <InputBox index={6} type="execute" />
+            <InputBoxList startIndex={4} />
             <p className="mt-2 text-center text-sm font-bold">
               グループのアクセス権
             </p>
@@ -102,9 +99,7 @@ export default function Home() {
 
           {/* その他のユーザー */}
           <div className="ml-4 min-w-[216px]">
-            <InputBox index={7} type="read" />
-            <InputBox index={8} type="write" />
-            <InputBox index={9} type="execute" />
+            <InputBoxList startIndex={5} />
             <p className="mt-2 text-center text-sm font-bold">
               その他のユーザーのアクセス権
             </p>

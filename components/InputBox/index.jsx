@@ -40,7 +40,7 @@ export default function InputBox({ type, index }) {
           : text === ''
           ? 'border-dashed border-indigo-100'
           : 'border-red-600',
-        'w-16 h-16 text-center text-3xl font-bold m-1 outline-none rounded-sm border-2',
+        'm-1 h-16 w-16 rounded-sm border-2 text-center text-3xl font-bold outline-none',
       ])}
     ></input>
   )
