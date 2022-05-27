@@ -5,6 +5,7 @@ import InputBox from '../components/InputBox'
 import InputBoxList from '../components/InputBoxList'
 import PermissionLabelList from '../components/PermissionLabelList'
 import { getPermissionBinary, getPermissionOctal } from '../utils/permission'
+import setText from '../utils/setText'
 
 const initArray = [...Array(10)].map((_, i) => {
   return {
@@ -28,6 +29,12 @@ export default function Home() {
     return result
   }
 
+  const handleClickSample = (pattern) => {
+    const array = setText(pattern.split(''))
+
+return setTextList(array)
+  }
+
   return (
     <div className="min-h-screen bg-indigo-50">
       <Head>
@@ -49,6 +56,9 @@ export default function Home() {
             <li className="mb-2 text-base">
               <span>drwxrwxrwx</span>
               <button
+                onClick={() => {
+                  handleClickSample('drwxrwxrwx')
+                }}
                 className="ml-2 rounded-md border-2 border-indigo-600 p-1 text-xs bg-white hover:bg-indigo-600 hover:text-white"
               >
                 適用する
@@ -56,7 +66,11 @@ export default function Home() {
             </li>
             <li className="text-base">
               <span>-rwxr-x-w-</span>
-              <button className="ml-2 rounded-md border-2 border-indigo-600 p-1 text-xs bg-white hover:bg-indigo-600 hover:text-white">
+              <button
+                onClick={() => {
+                  handleClickSample('-rwxr-x-w-')
+                }}
+                className="ml-2 rounded-md border-2 border-indigo-600 p-1 text-xs bg-white hover:bg-indigo-600 hover:text-white">
                 適用する
               </button>
             </li>
