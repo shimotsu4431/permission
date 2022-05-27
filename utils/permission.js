@@ -1,7 +1,7 @@
-export const R = 'r'
-export const W = 'w'
-export const X = 'x'
-export const HYPHEN = '-'
+const R = 'r'
+const W = 'w'
+const X = 'x'
+const HYPHEN = '-'
 
 export const getPermissionBinary = list => {
   const read = list[0] // r or -
