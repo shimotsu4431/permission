@@ -64,13 +64,13 @@ export default function Home() {
             <div className="mt-4 border-t-2">
               <p className="mt-4 text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
-                {getPermissionBinary(getPermissionTexts(1))}
+                {getPermissionOctal(getPermissionTexts(1))}
               </p>
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
               <p className="mt-2 text-center text-4xl font-bold tracking-widest">
-                {getPermissionOctal(getPermissionTexts(1))}
+                {getPermissionBinary(getPermissionTexts(1))}
               </p>
             </div>
             <PermissionLabelList startIndex={1} />
@@ -85,13 +85,13 @@ export default function Home() {
             <div className="mt-4 border-t-2">
               <p className="mt-4 text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
-                {getPermissionBinary(getPermissionTexts(4))}
+                {getPermissionOctal(getPermissionTexts(4))}
               </p>
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
               <p className="mt-2 text-center text-4xl font-bold tracking-widest">
-                {getPermissionOctal(getPermissionTexts(4))}
+                {getPermissionBinary(getPermissionTexts(4))}
               </p>
             </div>
             <PermissionLabelList startIndex={4} />
@@ -106,13 +106,13 @@ export default function Home() {
             <div className="mt-4 border-t-2">
               <p className="mt-4 text-center text-sm font-bold">8進数</p>
               <p className="mt-2 text-center text-4xl font-bold">
-                {getPermissionBinary(getPermissionTexts(7))}
+                {getPermissionOctal(getPermissionTexts(7))}
               </p>
             </div>
             <div className="mt-4">
               <p className="text-center text-sm font-bold">2進数</p>
               <p className="mt-2 text-center text-4xl font-bold tracking-widest">
-                {getPermissionOctal(getPermissionTexts(7))}
+                {getPermissionBinary(getPermissionTexts(7))}
               </p>
             </div>
             <PermissionLabelList startIndex={7} />
@@ -124,11 +124,11 @@ export default function Home() {
           <div className="flex h-14 w-[500px] items-center bg-slate-800 pl-4">
             <p className="text-white">
               $ chmod{' '}
-              {`${getPermissionBinary(
+              {`${getPermissionOctal(
                 getPermissionTexts(1)
-              )}${getPermissionBinary(
+              )}${getPermissionOctal(
                 getPermissionTexts(4)
-              )}${getPermissionBinary(getPermissionTexts(7))}`}{' '}
+              )}${getPermissionOctal(getPermissionTexts(7))}`}{' '}
               [filename]
             </p>
           </div>

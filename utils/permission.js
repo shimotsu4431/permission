@@ -3,7 +3,7 @@ const W = 'w'
 const X = 'x'
 const HYPHEN = '-'
 
-export const getPermissionBinary = list => {
+export const getPermissionOctal = list => {
   const read = list[0] // r or -
   const write = list[1] // w or -
   const execute = list[2] // x or -
@@ -21,7 +21,7 @@ export const getPermissionBinary = list => {
   return result
 }
 
-export const getPermissionOctal = list => {
+export const getPermissionBinary = list => {
   const read = list[0] // r or -
   const write = list[1] // w or -
   const execute = list[2] // x or -
