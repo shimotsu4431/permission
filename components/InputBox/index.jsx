@@ -36,17 +36,11 @@ export default function InputBox({ type, index }) {
       placeholder={textList[index].value}
       className={clsx([
         targetText.includes(text)
-          ? 'rounded-sm border-2 border-indigo-600'
+          ? 'border-indigo-600'
           : text === ''
-          ? 'rounded-sm border-2 border-dashed border-indigo-100'
-          : 'rounded-sm border-2 border-red-600',
-        'w-16',
-        'h-16',
-        'text-center',
-        'text-3xl',
-        'font-bold',
-        'm-1',
-        'outline-none',
+          ? 'border-dashed border-indigo-100'
+          : 'border-red-600',
+        'w-16 h-16 text-center text-3xl font-bold m-1 outline-none rounded-sm border-2',
       ])}
     ></input>
   )
