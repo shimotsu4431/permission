@@ -99,7 +99,7 @@ export default function Home() {
 
           {/* その他のユーザー */}
           <div className="ml-4 min-w-[216px]">
-            <InputBoxList startIndex={5} />
+            <InputBoxList startIndex={7} />
             <p className="mt-2 text-center text-sm font-bold">
               その他のユーザーのアクセス権
             </p>
