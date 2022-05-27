@@ -33,9 +33,9 @@ export default function InputBox({ type, index }) {
     <input
       onChange={e => handleChange(e)}
       maxLength={1}
-      placeholder={textList[index].value}
+      value={textList[index].value}
       className={clsx([
-        targetText.includes(text)
+        targetText.includes(textList[index].value)
           ? 'border-indigo-600'
           : text === ''
           ? 'border-dashed border-indigo-100'

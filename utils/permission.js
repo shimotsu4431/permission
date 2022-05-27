@@ -3,6 +3,10 @@ export const getPermissionBinary = list => {
   const write = list[1] // w or -
   const execute = list[2] // x or -
 
+  if (read !== 'r' && read !== '-') return '-'
+  if (write !== 'w' && write !== '-') return '-'
+  if (execute !== 'x' && execute !== '-') return '-'
+
   const read_num = read === 'r' ? 4 : 0
   const write_num = write === 'w' ? 2 : 0
   const execute_num = execute === 'x' ? 1 : 0
@@ -20,6 +24,10 @@ export const getPermissionOctal = list => {
   const read_num = read === 'r' ? 1 : 0
   const write_num = write === 'w' ? 1 : 0
   const execute_num = execute === 'x' ? 1 : 0
+
+  if (read !== 'r' && read !== '-') return `-`
+  if (write !== 'w' && write !== '-') return `-`
+  if (execute !== 'x' && execute !== '-') return `-`
 
   const result = `${read_num}${write_num}${execute_num}`
 
