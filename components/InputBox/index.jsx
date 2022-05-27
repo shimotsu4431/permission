@@ -38,7 +38,7 @@ export default function InputBox({ type, index }) {
         targetText.includes(textList[index].value)
           ? 'border-indigo-600'
           : text === ''
-          ? 'border-dashed border-indigo-100'
+          ? 'border-dashed border-gray-300'
           : 'border-red-600',
         'm-1 h-16 w-16 rounded-sm border-2 text-center text-3xl font-bold outline-none',
       ])}

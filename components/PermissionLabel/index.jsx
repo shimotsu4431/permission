@@ -17,7 +17,7 @@ export default function PermissionLabel({ index, label }) {
       className={clsx([
         textList[index].value === targetValue()
           ? 'border-indigo-600 font-bold'
-          : 'border-indigo-100',
+          : 'border-gray-300 text-gray-300',
         'm-1 flex h-9 w-1/3 items-center justify-center rounded-sm border-2 text-sm',
       ])}
     >
