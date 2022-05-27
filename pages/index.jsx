@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { atom, useRecoilValue } from 'recoil'
 
 import InputBox from '../components/InputBox'
-import PermissionLabel from '../components/PermissionLabel'
+import PermissionLabelList from '../components/PermissionLabelList'
 import { getPermissionBinary, getPermissionOctal } from '../utils/permission'
 
 const initArray = [...Array(10)].map((_, i) => {
@@ -74,13 +74,7 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(1))}
               </p>
             </div>
-            <div className="mt-4">
-              <ul className="flex">
-                <PermissionLabel index={1} label={'読み'} />
-                <PermissionLabel index={2} label={'書き'} />
-                <PermissionLabel index={3} label={'実行'} />
-              </ul>
-            </div>
+            <PermissionLabelList startIndex={1} />
           </div>
 
           {/* グループ */}
@@ -103,13 +97,7 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(4))}
               </p>
             </div>
-            <div className="mt-4">
-              <ul className="flex">
-                <PermissionLabel index={4} label={'読み'} />
-                <PermissionLabel index={5} label={'書き'} />
-                <PermissionLabel index={6} label={'実行'} />
-              </ul>
-            </div>
+            <PermissionLabelList startIndex={4} />
           </div>
 
           {/* その他のユーザー */}
@@ -132,13 +120,7 @@ export default function Home() {
                 {getPermissionOctal(getPermissionTexts(7))}
               </p>
             </div>
-            <div className="mt-4">
-              <ul className="flex">
-                <PermissionLabel index={7} label={'読み'} />
-                <PermissionLabel index={8} label={'書き'} />
-                <PermissionLabel index={9} label={'実行'} />
-              </ul>
-            </div>
+            <PermissionLabelList startIndex={7} />
           </div>
         </div>
 
