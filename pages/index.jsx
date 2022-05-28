@@ -29,10 +29,10 @@ export default function Home() {
     return result
   }
 
-  const handleClickSample = (pattern) => {
+  const handleClickSample = pattern => {
     const array = setText(pattern.split(''))
 
-return setTextList(array)
+    return setTextList(array)
   }
 
   return (
@@ -43,7 +43,7 @@ return setTextList(array)
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen min-w-[880px] p-6 bg-indigo-50">
+      <div className="min-h-screen min-w-[880px] bg-indigo-50 p-6">
         <header className="mb-10">
           <h1 className="mb-2 text-3xl font-bold">Permission Simulator</h1>
           <p>
@@ -59,7 +59,7 @@ return setTextList(array)
                 onClick={() => {
                   handleClickSample('drwxrwxrwx')
                 }}
-                className="ml-2 rounded-md border-2 border-indigo-600 p-1 text-xs bg-white hover:bg-indigo-600 hover:text-white"
+                className="ml-2 rounded-md border-2 border-indigo-600 bg-white p-1 text-xs hover:bg-indigo-600 hover:text-white"
               >
                 適用する
               </button>
@@ -70,7 +70,8 @@ return setTextList(array)
                 onClick={() => {
                   handleClickSample('-rwxr-x-w-')
                 }}
-                className="ml-2 rounded-md border-2 border-indigo-600 p-1 text-xs bg-white hover:bg-indigo-600 hover:text-white">
+                className="ml-2 rounded-md border-2 border-indigo-600 bg-white p-1 text-xs hover:bg-indigo-600 hover:text-white"
+              >
                 適用する
               </button>
             </li>
