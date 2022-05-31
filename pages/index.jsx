@@ -44,7 +44,7 @@ export default function Home() {
       </Head>
 
       <div className="min-h-screen min-w-[880px] bg-indigo-50 p-6">
-        <header className="mb-10">
+        <header className="mb-10 pb-6 border-b-2">
           <h1 className="mb-2 text-3xl font-bold">Permission Simulator</h1>
           <p>
             Permission Simulator は Linux
