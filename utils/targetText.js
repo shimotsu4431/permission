@@ -1,12 +1,14 @@
 const getTargetTextArray = type => {
+  const result = ['-']
+
   if (type === 'file') {
-    return ['-', 'd']
+    return [...result, 'd']
   } else if (type === 'read') {
-    return ['-', 'r']
+    return [...result, 'r']
   } else if (type === 'write') {
-    return ['-', 'w']
+    return [...result, 'w']
   } else if (type === 'execute') {
-    return ['-', 'x']
+    return [...result, 'x']
   }
 }
 
