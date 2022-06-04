@@ -39,12 +39,15 @@ export default function Home() {
     <div>
       <Head>
         <title>Permission Simulator</title>
-        <meta name="description" content="Permission Simulator は Linux で扱われるファイルの権限管理のシミュレーターです。" />
+        <meta
+          name="description"
+          content="Permission Simulator は Linux で扱われるファイルの権限管理のシミュレーターです。"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="min-h-screen min-w-[880px] bg-indigo-50 p-6">
-        <header className="mb-10 pb-6 border-b-2">
+        <header className="mb-10 border-b-2 pb-6">
           <h1 className="mb-2 text-3xl font-bold">Permission Simulator</h1>
           <p>
             Permission Simulator は Linux
@@ -161,6 +164,18 @@ export default function Home() {
               [filename]
             </p>
           </div>
+        </div>
+
+        <div className="mt-4">
+          code:{' '}
+          <a
+            className="underline"
+            href="https://github.com/shimotsu4431/permission"
+            target={'_blank'}
+            rel="noreferrer"
+          >
+            https://github.com/shimotsu4431/permission
+          </a>
         </div>
       </div>
     </div>

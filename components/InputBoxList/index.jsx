@@ -1,14 +1,12 @@
 import InputBox from '../InputBox'
 
-const list = ["read", "write", "execute"]
+const list = ['read', 'write', 'execute']
 
 export default function InputBoxList({ startIndex }) {
   return (
     <>
       {list.map((item, i) => {
-        return (
-          <InputBox key={i} index={startIndex + i} type={item} />
-        )
+        return <InputBox key={i} index={startIndex + i} type={item} />
       })}
     </>
   )
